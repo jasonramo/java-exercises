@@ -1,6 +1,6 @@
 package org.launchcode.java.school;
 
-//TODO - need to figure out which one to set less than public
+//TODOs - need to figure out which one to set less than public
 
 public class Student {
 

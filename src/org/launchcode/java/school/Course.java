@@ -15,5 +15,9 @@ public class Course {
         this.roster = roster;
 
 
+
+        Student jason = new Student();
+        roster.add(jason);
+
     }
 }
