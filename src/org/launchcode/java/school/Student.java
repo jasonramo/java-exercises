@@ -20,7 +20,7 @@ public class Student {
     }
 
     public Student(String name, int studentId) {
-        this(name, studentId, 0, 0.0)
+        this(name, studentId, 0, 0.0);
     }
 
     public Student(String name) {
@@ -29,20 +29,20 @@ public class Student {
     }
 
     public void addGrade(int courseCredits, double grade) {
-        //TODO - update the appropriate fields: numberofcredits, gpa ????
+
         if (grade >= 90.0){
             grade = 4.0;
-        }else if (90.0 > grade && grade >= 80.0) {
+        } else if (90.0 > grade && grade >= 80.0) {
             grade = 3.0;
-        }else if (80.0 > grade && grade >= 70.0) {
+        } else if (80.0 > grade && grade >= 70.0) {
             grade = 2.0;
-        }else if (70.0> grade && grade >= 60.0) {
+        } else if (70.0> grade && grade >= 60.0) {
             grade = 1.0;
-        }else {
+        } else {
             grade = 0.0;
         }
 
-        this.gpa = ((this.gpa * this.numberOfCredits) + (grade * courseCredits)) / (this.numberOfCredits + courseCredits)
+        this.gpa = ((this.gpa * this.numberOfCredits) + (grade * courseCredits)) / (this.numberOfCredits + courseCredits);
     }
 
     public String getGradeLevel() {
@@ -63,6 +63,19 @@ public class Student {
     }
 
     public boolean equals(Object o) {
+
+        if (o == this) {
+            return true;
+        }
+
+        if (o == null) {
+            return false;
+        }
+
+        if (o.getClass() != getClass()) {
+            return false;
+        }
+
         return  ((Student) o).getStudentId() == getStudentId();
     }
 
